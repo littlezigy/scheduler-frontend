@@ -48,11 +48,27 @@ export default{
 }
 </script>
 <style>
+:root {
+    --pink: pink;
+    --blue: powderblue;
+}
+.pink {
+    background-color: var(--pink);
+}
+.blue {
+    background-color: var(--blue);
+}
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
+}
+div, p, nav, section, main {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 div#container {
         display: flex;
@@ -81,8 +97,8 @@ a:visited, a:active {
     text-align: right;
 }
 img#user_profile {
-    width: 15em;
-    height: 15em;
+    width: 90%;
+    height: 10em;
     margin: auto;
 }
 @media only screen and (max-width: 918px) {
@@ -156,7 +172,7 @@ img#user_profile {
     }
 
     div#stats {
-        flex: 1 0 25%;
+        flex: 1 3 9em;
         order: 3;
     }
 
@@ -165,7 +181,7 @@ img#user_profile {
     }
 
     nav#menu{
-        flex: 1 0 25%;
+        flex: 1 3 6em;
         background: lightgrey;
     }
 }
