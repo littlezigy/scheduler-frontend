@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue/dist/css/app.51481c81.css"
   },
   {
-    "revision": "7c09fa3ae5c90dc476dfc02efb49e5ca",
+    "revision": "7f2aa41a144ae44833f2cc30e6d7b1c7",
     "url": "/vue/dist/index.html"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue/dist/js/chunk-vendors.644e17d7.js"
   },
   {
-    "revision": "4b14c64efaf846819b9a229b4193c8b7",
+    "revision": "b2d2402de103cca398997474ec674b88",
     "url": "/vue/dist/manifest.json"
   },
   {
