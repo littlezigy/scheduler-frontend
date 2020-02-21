@@ -1,4 +1,5 @@
 jobs:
+  on: [push]
   deploy:
     name: Upload to Amazon S3 Bucket
     runs-on: ubuntu-latest
