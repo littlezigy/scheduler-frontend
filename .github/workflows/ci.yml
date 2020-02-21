@@ -18,8 +18,8 @@ jobs:
 
       - name: Zip up files
         run: |
-          apt-get update
-          apt-get install -y zip
+          sudo apt-get update
+          sudo apt-get install -y zip
           zip -r scheduler_frontend.zip -r . -x vue/*
           zip -r scheduler_frontend.zip -r vue/dist/*
 
