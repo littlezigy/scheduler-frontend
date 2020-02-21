@@ -26,3 +26,7 @@ jobs:
       - name: Copy files to S3 with the AWS CLI
         run: |
           aws s3 cp scheduler_frontend.zip s3://codedeploy.ubuntu
+
+      - name: Deploy on CodeDeploy
+        run: |
+            aws deploy push --application-name test2 --s3-location s3://codedeploy.ubuntu/scheduler_frontend.zip
