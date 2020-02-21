@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: html
+    destination: /var/www/scheduler/html
+  - source: styles
+    destination: /var/www/scheduler/styles
+  - source: vue/dist
+    destination: /var/www/scheduler/vue/dist
+  - source: controller.php
+    destination: /var/www/scheduler/
+  - source: index.php
+    destination: /var/www/scheduler/
+  - source: model.php
+    destination: /var/www/scheduler/
+  - source: view.php
+    destination: /var/www/scheduler/
