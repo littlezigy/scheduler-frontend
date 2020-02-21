@@ -7,7 +7,7 @@ button, label {
 <template>
 <div>
     <label>
-        Task Name: <input type = 'text' placeholder = 'Task name'>
+        Task Name: <input type = 'text' placeholder = 'Task name' v-model = 'name'>
     </label>
     Deadline <input type = 'date' v-model = 'end_date'>
     <p>With the time you have to complete this task, do you have enough time?</p>
@@ -26,20 +26,32 @@ button, label {
     </div>
 
     <button v-if = 'advanced === true' @click = 'advanced = false'>Hide Advanced</button>
+
+    <button @click = 'createtask'>Create Task</button>
 </div>
 </template>
 
 <script>
+let axios = require('axios');
 export default {
     data() {
         return {
             advanced: false,
+            name: '',
             timing: ['Way too much time', 'I\'m good', 'I\'ll manage', 'Enough time'],
             duration: '',
             duration_phrase: '',
-            duration_factor: 0.1,
+            duration_factor: 1,
             start_date: '',
             end_date: ''
+        }
+    },
+    methods: {
+        createtask: function() {
+            console.log("Creating task");
+            let task = {name: this.name, duration_factor: this.duration_factor, end_date: this.end_date};
+            console.log("Submitting new task", task);
+            axios.post('http://localhost:3000/v1/tasks', task);
         }
     },
     computed: {       

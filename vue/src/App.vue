@@ -8,7 +8,7 @@
                 <div></div>
             </div>
 
-            <router-link :class = '{active: showMenu}' to = '/'>Home</router-link>
+            <router-link :class = '{active: showMenu}' to = '/'>Dashboard</router-link>
             <router-link :class = '{active: showMenu}' to="/tasks">All Tasks</router-link>
             <router-link :class = '{active: showMenu}' to="/tasks/add" >Add Task</router-link>
             <router-link :class = '{active: showMenu}' to='/about'>About</router-link>
